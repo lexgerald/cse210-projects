@@ -2,6 +2,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        //Initialize core components
         Journal journal = new Journal();
         PromptGenerator promptGenerator = new PromptGenerator();
         bool running = true;
@@ -9,11 +10,13 @@ class Program
         Console.WriteLine("Welcome to the Journal Program!");
         Console.WriteLine("********************************");
 
+        //Main program loop
         while (running)
         {
             DisplayMenu();
             string choice = Console.ReadLine();
 
+            //Process user choice
             switch (choice)
             {
                 case "1":
@@ -40,6 +43,7 @@ class Program
         Console.WriteLine("Thank you for using the Journal Program!");
     }
 
+    // Displays the main menu options to the user
     static void DisplayMenu()
     {
         Console.WriteLine("\nPlease select one of the following choices:");
@@ -51,6 +55,9 @@ class Program
         Console.Write("Enter your choice (1-5): ");
     }
 
+    // Handles the creation of a new journal entry
+    // The Journal object to add entries to
+    // The PromptGenerator to get random prompts
     static void WriteNewEntry(Journal journal, PromptGenerator promptGenerator)
     {
         string prompt = promptGenerator.GetRandomPrompt();
@@ -65,6 +72,7 @@ class Program
         Console.WriteLine("Entry added successfully!");
     }
 
+    // Handles saving the journal to a file
     static void SaveJournal(Journal journal)
     {
         Console.Write("Enter filename to save: ");
@@ -72,6 +80,7 @@ class Program
         journal.SaveToFile(filename);
     }
 
+    // Handles loading the journal from a file
     static void LoadJournal(Journal journal)
     {
         Console.Write("Enter filename to load: ");
