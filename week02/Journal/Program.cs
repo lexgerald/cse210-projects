@@ -7,6 +7,7 @@ class Program
         bool running = true;
 
         Console.WriteLine("Welcome to the Journal Program!");
+        Console.WriteLine("********************************");
 
         while (running)
         {
@@ -41,7 +42,7 @@ class Program
 
     static void DisplayMenu()
     {
-        Console.WriteLine("\nPlease choose an option:");
+        Console.WriteLine("\nPlease select one of the following choices:");
         Console.WriteLine("1. Write a new entry");
         Console.WriteLine("2. Display the journal");
         Console.WriteLine("3. Load the journal from a file");
