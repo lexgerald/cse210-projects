@@ -5,28 +5,27 @@ public class Word
 
     public Word(string text)
     {
-        // Constructor implementation
+        _text = text;
+        _isHidden = false; // Words are visible by default
     }
 
     public void Hide()
     {
-        // Method to hide the word
+        _isHidden = true;
     }
 
     public void Show()
     {
-        // Method to show the word
+        _isHidden = false;
     }
 
     public bool IsHidden()
     {
-        // Method to check if word is hidden
-        return false; 
+        return _isHidden;
     }
 
     public string GetDisplayText()
     {
-        // Method to get display text
-        return ""; 
+        return _isHidden ? "_____" : _text;
     }
 }

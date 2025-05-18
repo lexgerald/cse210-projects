@@ -8,18 +8,30 @@ public class Reference
     // Constructor for single verse
     public Reference(string book, int chapter, int verse)
     {
-        // Implementation
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
+        _endVerse = verse; // For single verse, endVerse is same as verse
     }
 
     // Constructor for verse range
     public Reference(string book, int chapter, int startVerse, int endVerse)
     {
-        // Implementation
+        _book = book;
+        _chapter = chapter;
+        _verse = startVerse;
+        _endVerse = endVerse;
     }
 
     public string GetDisplayText()
     {
-        // Method to format reference text
-        return ""; 
+        if (_verse == _endVerse)
+        {
+            return $"{_book} {_chapter}:{_verse}";
+        }
+        else
+        {
+            return $"{_book} {_chapter}:{_verse}-{_endVerse}";
+        }
     }
 }
