@@ -17,7 +17,7 @@ public class Entry
         Console.WriteLine($"Prompt: {Prompt}");
         Console.WriteLine($"Response: {Response}\n");
     }
-
+    
     public string FormatForSave()
     {
         return $"{Date}~|~{Prompt}~|~{Response}";
