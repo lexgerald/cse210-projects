@@ -1,0 +1,8 @@
+0
+0
+EternalGoal|Scripture Study|studying the scripture|100|0
+SimpleGoal|to study|studying my notes|50|False
+SimpleGoal|going to the mall|buying items|50|False
+EternalGoal|Marriage|to marry the love of my life|100|0
+SimpleGoal|to focus on my study|studying each day|50|False
+EternalGoal|to visit the temple|doing baptism of the dead|100|0
